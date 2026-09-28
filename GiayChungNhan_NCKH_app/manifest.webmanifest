@@ -1,0 +1,25 @@
+{
+  "name": "Giấy chứng nhận NCKH – ĐHYTCC",
+  "short_name": "GCN NCKH",
+  "description": "Soạn, ký và xuất PDF giấy chứng nhận đề tài NCKH sinh viên Trường Đại học Y tế Công cộng.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#edf1ec",
+  "theme_color": "#0f5a36",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
