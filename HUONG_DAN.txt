@@ -1,0 +1,24 @@
+GIẤY CHỨNG NHẬN NCKH SINH VIÊN 2025–2026 – TRƯỜNG ĐẠI HỌC Y TẾ CÔNG CỘNG
+==========================================================================
+
+CÁCH 1 – Dùng ngay trên máy (không cần mạng)
+  Mở file "GiayChungNhan_NCKH_offline.html" bằng Chrome hoặc Edge (bấm đúp).
+
+CÁCH 2 – Đưa lên mạng để có đường link riêng và cài thành app
+  a) Netlify (nhanh nhất): vào https://app.netlify.com/drop , đăng nhập,
+     kéo thả cả thư mục "GiayChungNhan_NCKH_app" vào trang → nhận link dạng
+     https://<ten>.netlify.app . Gửi link này cho mọi người.
+  b) Hoặc GitHub Pages: tạo repo, tải toàn bộ nội dung thư mục lên,
+     Settings → Pages → Deploy from branch (main, thư mục gốc).
+
+  Cài thành app:
+  - Máy tính (Chrome/Edge): mở link → bấm biểu tượng "Cài đặt ứng dụng" ở
+    cuối thanh địa chỉ (hoặc menu ⋮ → Cài đặt Giấy chứng nhận NCKH).
+  - Điện thoại: Android (Chrome) → menu ⋮ → "Thêm vào màn hình chính";
+    iPhone (Safari) → nút Chia sẻ → "Thêm vào MH chính".
+  Sau lần mở đầu tiên, app dùng được cả khi không có mạng.
+
+Mở thẳng một đề tài: thêm #05 (hoặc #SV25.26-05) vào cuối đường link.
+Nút "In / PDF nét": chọn máy in "Lưu dưới dạng PDF", khổ A4 ngang,
+lề "Không", bật "Đồ họa nền" để có PDF chữ vector sắc nét.
+Dữ liệu sửa được lưu trên trình duyệt của từng máy.
