@@ -168,7 +168,7 @@ textarea{resize:vertical;line-height:1.4}
 #cert .sub.b{top:362px;font-size:21px;color:#262626;letter-spacing:.015em}
 #cert .sub.g{top:330px;font-size:24px;font-weight:700;color:#0f5a36;letter-spacing:.03em}
 #cert .subrule{position:absolute;left:600px;top:363px;width:290px;height:22px;display:block;max-width:none}
-#cert .body{position:absolute;left:178px;width:1222px;--k:1;--cx:567px;--sw:600px}
+#cert .body{position:absolute;left:178px;width:1222px;--k:1;--cx:567px;--sw:560px}
 #cert .r{display:grid;grid-template-columns:calc(var(--labw,284px)*max(1,var(--s-lab,1))) 1fr;margin-bottom:calc(7px*var(--k))}
 #cert .lab{font-weight:700;font-size:calc(var(--labfs,21.5px)*min(var(--k),1)*var(--s-lab,1));color:var(--lab,#a0671c);padding-top:calc(2px*var(--k));white-space:nowrap;
   text-shadow:0 0 3px #faf7f0,0 0 6px #faf7f0}
@@ -194,10 +194,10 @@ textarea{resize:vertical;line-height:1.4}
 #cert .rrule{display:block;margin-left:calc(var(--cx) - 130px);width:260px;height:20px;max-width:none}
 #cert .stmt{--sw2:calc(var(--sw)*max(1,var(--s-stmt,1)));margin-left:calc(var(--cx) - var(--sw2) / 2);width:var(--sw2);text-align:center;font-style:italic;font-size:calc(21.5px*min(var(--k),1)*var(--s-stmt,1));line-height:1.3;white-space:pre-line;margin-top:calc(2px*var(--k));
   text-shadow:0 0 3px #faf7f0,0 0 6px #faf7f0,0 0 10px #faf7f0}
-#cert .sig{position:absolute;left:1015px;width:310px;top:800px;text-align:center}
+#cert .sig{position:absolute;left:1045px;width:310px;top:782px;text-align:center}
 #cert .sig .d{font-style:italic;font-size:calc(21.5px*var(--s-sig,1));white-space:nowrap}
 #cert .sig .t{font-weight:700;font-size:calc(22px*var(--s-sig,1));margin-top:3px;white-space:pre-line;line-height:1.25}
-#cert .sig .es{position:relative;height:44px}
+#cert .sig .es{position:relative;height:62px}
 #cert .sig .es img{position:absolute;display:block;max-width:none}
 #cert .sig .ln{width:220px;height:1px;background:#2b2b2b;opacity:.65;margin:0 auto 7px}
 #cert .sig .n{font-weight:700;font-size:calc(21px*var(--s-sig,1));white-space:nowrap}
@@ -888,7 +888,7 @@ function sublineHTML(id){
   return `<div class="subline" style="top:${c[0]-13}px;left:${c[1]}px;width:${c[2]}px;text-align:${c[3]||"center"};color:${c[4]||"#2e3a33"};font-weight:${c[5]?700:400}">TRƯỜNG ĐẠI HỌC Y TẾ CÔNG CỘNG <small>CHỨNG NHẬN</small></div>`;
 }
 const tplOf = id => TEMPLATES.find(t => t.id === id) || TEMPLATES[0];
-const DEFAULT_STMT = "Đã hoàn thành đề tài nghiên cứu khoa học sinh viên cấp Trường\nnăm học 2025 – 2026.";
+const DEFAULT_STMT = "Đã hoàn thành đề tài nghiên cứu khoa học sinh viên\nnăm học 2025 – 2026.";
 const DEFAULT_COMMON = {day:"...", month:"...", year:"2026", signTitle:"KT. HIỆU TRƯỞNG\nPHÓ HIỆU TRƯỞNG", signName:"PGS.TS. Lê Thị Thanh Hương",
   sig:"", stamp:"", sigH:78, stS:128, stX:-48, stY:-6, showCls:true, autoFit:true,
   fs:{topic:1, info:1, mem:1, lab:1, rank:1, stmt:1, sig:1}};
