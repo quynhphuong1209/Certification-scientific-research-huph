@@ -212,6 +212,7 @@ textarea{resize:vertical;line-height:1.4}
 #cert.t3 .lab{font-size:calc(17.5px*min(var(--k),1)*var(--s-lab,1));letter-spacing:.08em;color:#9a6a1c;padding-top:calc(5px*var(--k))}
 #cert.t3 .rankrow .lab{padding-top:calc(24px*var(--k))}
 #cert.t3 .m{grid-template-columns:calc(34px*var(--k)*var(--s-mem,1)) calc(370px*var(--k)*var(--s-mem,1)) 1fr}
+#cert.t2 .stmt{font-size:calc(25px*min(var(--k),1)*var(--s-stmt,1))}
 #cert.t3 .sig{left:1126px;width:270px;top:774px}
 #cert.t3 .sig .es{height:126px}
 /* --- Mẫu 4 · Văn bằng --- */
@@ -889,7 +890,7 @@ function sublineHTML(id){
   return `<div class="subline" style="top:${c[0]-13}px;left:${c[1]}px;width:${c[2]}px;text-align:${c[3]||"center"};color:${c[4]||"#2e3a33"};font-weight:${c[5]?700:400}">TRƯỜNG ĐẠI HỌC Y TẾ CÔNG CỘNG <small>CHỨNG NHẬN</small></div>`;
 }
 const tplOf = id => TEMPLATES.find(t => t.id === id) || TEMPLATES[0];
-const DEFAULT_STMT = "Đã hoàn thành đề tài nghiên cứu khoa học sinh viên\nnăm học 2025 – 2026.";
+const DEFAULT_STMT = "Đã hoàn thành đề tài nghiên cứu khoa học sinh viên\nnăm học 2025 – 2026";
 const DEFAULT_COMMON = {day:"...", month:"...", year:"2026", signTitle:"KT. HIỆU TRƯỞNG\nPHÓ HIỆU TRƯỞNG", signName:"PGS.TS. Lê Thị Thanh Hương",
   sig:"", stamp:"", sigH:78, stS:128, stX:-48, stY:-6, showCls:true, autoFit:true,
   fs:{topic:1, info:1, mem:1, lab:1, rank:1, stmt:1, sig:1}};
