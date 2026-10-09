@@ -161,7 +161,7 @@ textarea{resize:vertical;line-height:1.4}
 #cert .cap-huph{left:495px;width:500px;top:151px;color:#0f5a36}
 #cert .cap-huph b{display:block;font-size:21.5px;font-weight:700;letter-spacing:.005em}
 #cert .cap-huph span{display:block;font-size:13.8px;letter-spacing:.02em;margin-top:1px}
-#cert canvas.title{position:absolute;left:265px;top:222px;width:960px;height:120px}
+#cert canvas.title{position:absolute;left:265px;top:190px;width:960px;height:120px}
 #cert .subline{position:absolute;white-space:nowrap;font-size:17.5px;line-height:26px;letter-spacing:.13em}
 #cert .subline small{font-size:.76em;letter-spacing:.16em;margin-left:.2em}
 #cert .sub{position:absolute;left:345px;width:800px;text-align:center;white-space:nowrap}
@@ -444,8 +444,8 @@ const PRESETS = [
   advisors:["ThS. Vũ Thái Sơn","ThS. Hoàng Thị Hà"]},
 ];
 const TEMPLATES = [
-  {id:1, name:"Cổ điển xanh", thumb:"assets/thumb-1.jpg", kind:"orig", top:398, bottom:898},
-  {id:2, name:"Cổ điển đỏ", thumb:"assets/thumb-2.jpg", kind:"orig", top:402, bottom:898},
+  {id:1, name:"Cổ điển xanh", thumb:"assets/thumb-1.jpg", kind:"orig", top:322, bottom:898},
+  {id:2, name:"Cổ điển đỏ", thumb:"assets/thumb-2.jpg", kind:"orig", top:326, bottom:898},
   {id:3, name:"Hiện đại", thumb:"assets/thumb-3.jpg", bg:"assets/tpl-3.webp", top:314, bottom:858},
   {id:4, name:"Văn bằng", thumb:"assets/thumb-4.jpg", bg:"assets/tpl-4.webp", top:386, bottom:912},
   {id:5, name:"Viền ngọc lục bảo", thumb:"assets/thumb-5.jpg", bg:"assets/tpl-5.webp", top:372, bottom:908},
@@ -757,9 +757,7 @@ function certHTML(r, common, variant){
   const lead = members[0] ? members[0].name.trim() : "";
   const rank = (r.rank||"").trim();
   const hasSig = !!common.sig, hasStamp = !!common.stamp;
-  const header = variant === 1
-    ? `<div class="sub a">TRƯỜNG ĐẠI HỌC Y TẾ CÔNG CỘNG</div><div class="sub b">CHỨNG NHẬN</div>`
-    : `<div class="sub g">TRƯỜNG ĐẠI HỌC Y TẾ CÔNG CỘNG</div><img class="subrule" src="assets/rank-rule.png" alt="">`;
+  const header = "";
   const sigImg = hasSig ? `<img alt="" src="${common.sig}" style="height:${common.sigH}px;left:50%;top:${Math.round(52 - common.sigH/2)}px;transform:translateX(-50%)">` : "";
   const stampImg = hasStamp ? `<img alt="" src="${common.stamp}" style="width:${common.stS}px;height:${common.stS}px;object-fit:contain;left:calc(50% + ${Math.round(common.stX - common.stS/2)}px);top:${Math.round(40 + common.stY - common.stS/2)}px">` : "";
   const T = tplOf(variant);
