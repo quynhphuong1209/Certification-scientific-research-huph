@@ -214,6 +214,8 @@ textarea{resize:vertical;line-height:1.4}
 #cert.t3 .rankrow .lab{padding-top:calc(24px*var(--k))}
 #cert.t3 .m{grid-template-columns:calc(34px*var(--k)*var(--s-mem,1)) calc(370px*var(--k)*var(--s-mem,1)) 1fr}
 #cert.t1 .stmt,#cert.t2 .stmt,#cert.t3 .stmt{font-size:calc(25px*min(var(--k),1)*var(--s-stmt,1))}
+#cert.t1 .sig{top:762px}
+#cert .stmt.hd{position:absolute;left:0;width:1491px;margin:0;top:312px;text-align:center;white-space:nowrap;font-style:italic;font-size:calc(24px*var(--s-stmt,1));line-height:30px}
 #cert.t3 .sig{left:1126px;width:270px;top:774px}
 #cert.t3 .sig .es{height:126px}
 /* --- Mẫu 4 · Văn bằng --- */
@@ -446,7 +448,7 @@ const PRESETS = [
   advisors:["ThS. Vũ Thái Sơn","ThS. Hoàng Thị Hà"]},
 ];
 const TEMPLATES = [
-  {id:1, name:"Cổ điển xanh", thumb:"assets/thumb-1.jpg", kind:"orig", top:322, bottom:898},
+  {id:1, name:"Cổ điển xanh", thumb:"assets/thumb-1.jpg", kind:"orig", top:346, bottom:898},
   {id:2, name:"Cổ điển đỏ", thumb:"assets/thumb-2.jpg", kind:"orig", top:326, bottom:898},
   {id:3, name:"Hiện đại", thumb:"assets/thumb-3.jpg", bg:"assets/tpl-3.webp", top:314, bottom:858},
   {id:4, name:"Văn bằng", thumb:"assets/thumb-4.jpg", bg:"assets/tpl-4.webp", top:386, bottom:912},
@@ -780,14 +782,14 @@ function certHTML(r, common, variant){
     <div class="rankrow"><div class="lab">XẾP LOẠI:</div>
       <div class="rank"><img src="assets/laurel-l.png" alt=""><span class="x${rank?"":" empty"}">${rank?esc(rank):"……………"}</span><img src="assets/laurel-r.png" alt=""></div></div>
     <img class="rrule" src="assets/rank-rule.png" alt="">
-    <div class="stmt">${esc(r.stmt)}</div>
+    ${variant === 1 ? "" : `<div class="stmt">${esc(r.stmt)}</div>`}
   </div>
   <div class="sig${T.L ? " sm" : ""}"${T.L ? ` style="left:${T.L.sig[0]}px;top:${T.L.sig[1]}px;width:${T.L.sig[2]}px"` : ""}>
     <div class="d">Hà Nội, ngày ${esc(common.day)} tháng ${esc(common.month)} năm ${esc(common.year)}</div>
     <div class="t">${esc(common.signTitle)}</div>
     <div class="es">${sigImg}${stampImg}</div>
     <div class="n">${esc(common.signName)}</div>
-  </div>`;
+  </div>${variant === 1 ? `<div class="stmt hd">${esc((r.stmt||"").replace(/\s*\n\s*/g, " ").replace(/^Đã hoàn thành/i, "Hoàn thành"))}</div>` : ""}`;
 }
 
 function fit(variant){
